@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/sass/mixins";
+
+@include fonts('lexend-regular','/assets/fonts/Lexend-Regular');
+@include fonts('lexend-bold','/assets/fonts/Lexend-Bold');
+@include fonts('lexend-semibold','/assets/fonts/Lexend-SemiBold');
+
+:root{
+    --orange : #f05a28;
+    --blue: #194f90;
+    --blue-strong: #091e37;
+    --text: #1a1a1a;
+}
+
+body{
+    font-family: lexend-regular;
+}
+
+h1{
+
+}
+
+h2{
+    position: relative;
+    display:inline-block;
+    color: white;
+    font-size: 72px;
+    font-family: lexend-bold;
+
+    &.blue{
+        &::after{
+            background-image: url(../src/assets/images/esquina-blue.png);
+        }
+    }
+    
+    &::after{
+        content: "";
+        background-image: url(../src/assets/images/esquina-white.png);
+        width: 70px;
+        height: 120px;
+        position: absolute;
+        left: -25px;
+        top:-8px;
+    }
+}
+
+.container-fluid{
+    &.custom{
+        padding: 0px 12%;
+
+        @include for_breakpoint(1499){
+            padding: 0px 8%;
+        }
+
+        @include for_breakpoint(480){
+            padding: 0px 3%;
+        }
+    }
+}
