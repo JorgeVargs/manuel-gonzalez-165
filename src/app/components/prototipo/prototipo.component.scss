@@ -24,6 +24,11 @@
                 td{
                     color: white;
                     padding: 20px 0px;
+
+                    img{
+                        filter: invert(39%) sepia(84%) saturate(1876%) hue-rotate(347deg) brightness(99%) contrast(91%);
+                        ;
+                    }
                 }
 
                 &:last-of-type{
@@ -60,6 +65,19 @@
 .creditos{
     background-color: var(--orange);
     padding: 30px 0px;
+    position: relative;
+
+    &::before{
+        content: "";
+        background-image: url(../../../assets/images/esquina-creditos.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position:absolute;
+        width: 175px;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
 
     img{
         max-width: 80px;
@@ -71,5 +89,6 @@
     p{
         color: white;
         text-align: center;
+        font-size: 28px;
     }
 }
