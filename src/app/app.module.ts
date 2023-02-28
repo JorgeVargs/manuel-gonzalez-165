@@ -16,6 +16,7 @@ import { PrototipoComponent } from './components/prototipo/prototipo.component';
 import { UbicacionComponent } from './components/ubicacion/ubicacion.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 
+import { SwiperModule } from 'swiper/angular';
 import { HttpClientModule } from '@angular/common/http';
 import { RECAPTCHA_SETTINGS,RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
@@ -40,7 +41,8 @@ import { environment } from 'src/environments/environment';
     FormsModule,
     HttpClientModule,
     RecaptchaFormsModule,
-    RecaptchaModule
+    RecaptchaModule,
+    SwiperModule,
   ],
   providers: [
     {

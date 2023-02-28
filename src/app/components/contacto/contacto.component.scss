@@ -13,65 +13,10 @@ background-color: var(--orange);
     padding: 45px 0px 90px;
   }
 
-  h2 {
-    color: white;
-    font-size: 72px;
-    font-family: barlow-bold;
-    display: inline-block;
-
-    &::after {
-      content: "";
-      display: block;
-      background-color: var(--yellow);
-      width: 120px;
-      height: 6px;
-      border-radius: 2px;
-      margin-top: 8px;
-      margin-bottom: 44px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @include for_breakpoint(1699) {
-      font-size: 68px;
-    }
-
-    @include for_breakpoint(1399) {
-      font-size: 60px;
-    }
-
-    @include for_breakpoint(1199) {
-      font-size: 50px;
-
-      &::after {
-        width: 100px;
-        margin-bottom: 45px;
-      }
-    }
-
-    @include for_breakpoint(991) {
-      text-align: center;
-      margin-top: 40px;
-
-      &::after {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 25px;
-      }
-    }
-
-    @include for_breakpoint(767) {
-      margin-top: 20px;
-
-      &::after {
-        margin-bottom: 30px;
-      }
-    }
-
-    @include for_breakpoint(480) {
-      font-size: 40px;
-    }
+  h2{
+    margin-bottom: 70px;
   }
+
 
   .contact-no {
     display: flex;
@@ -80,21 +25,21 @@ background-color: var(--orange);
     img {
       width: 50px;
       height: auto;
-      filter: invert(58%) sepia(13%) saturate(1457%) hue-rotate(130deg) brightness(94%) contrast(86%);
+      filter: invert(8%) sepia(48%) saturate(1993%) hue-rotate(188deg) brightness(94%) contrast(96%);
       margin-right: 15px;
     }
 
     a {
       text-decoration: none;
-      font-family: barlow-semibold;
-      font-size: 32px;
+      font-family: lexend-bold;
+      font-size: 24px;
       text-align: left;
       color: white;
       line-height: 1.1;
 
       p {
         color: white;
-        font-family: barlow-regular;
+        font-family: lexend-light;
         font-size: 18px;
         margin: 0px;
       }
@@ -118,8 +63,8 @@ background-color: var(--orange);
   }
 
   h4 {
-    color: var(--gold-color);
-    font-family: barlow-semibold;
+    color: var(--blue-strong);
+    font-family: lexend-semibold;
     font-size: 30px;
     text-align: left;
     margin-top: 50px;
@@ -148,16 +93,16 @@ background-color: var(--orange);
       background-color: transparent;
       color: white;
       font-size: 20px;
-      font-family: barlow-semibold;
+      font-family: lexend-bold;
 
       &:active,
       &:focus {
         box-shadow: none;
-        border-color: var(--gold-color);
-        border-width: 2px;
+        border-color: var(--blue-strong);
+        border-width: 3px;
       }
 
-      @include placeholder(white, 20px, barlow-regular);
+      @include placeholder(white, 20px, lexend-light);
     }
 
     .form-check {
@@ -169,7 +114,7 @@ background-color: var(--orange);
       }
 
       label {
-        font-family: barlow-regular;
+        font-family: lexend-regular;
         counter-reset: white;
         font-size: 20px;
 
@@ -182,8 +127,8 @@ background-color: var(--orange);
 
 
     p {
-      font-family: barlow-regular;
-      color: var(--gold-color);
+      font-family: lexend-regular;
+      color: var(--blue-strong);
       font-size: 20px;
       text-align: right;
       margin-top: 20px;
@@ -226,6 +171,6 @@ background-color: var(--orange);
 
 
 re-captcha.is-invalid>div {
-  border: 1px solid #dc3545 !important;
+  border: 1px solid var(--blue) !important;
   border-radius: 0.2rem;
 }
