@@ -1,5 +1,19 @@
 @import "../../../assets/sass/mixins";
 
+$height-banner:1000px;
+
+@include for_breakpoint(1599) {
+  $height-banner: 900px;
+}
+
+@include for_breakpoint(1399) {
+  $height-banner: 800px;
+}
+
+@include for_breakpoint(480) {
+  $height-banner: 700px;
+}
+
 .header{
     position: relative;
     .container,
@@ -7,45 +21,58 @@
         z-index: 2;
     }
     background-image: url(../../../assets/images/banner-manuel-gonzales-165.jpg);
-    height: 1000px;
+    height: $height-banner;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
-
-    @include for_breakpoint(1599){
-        height: 900px;
-    }
-
-    @include for_breakpoint(1399){
-        height: 800px;
-    }
-
-    @include for_breakpoint(480){
-        height: 700px;
-    }
 
     
 
-    &::before{
-        content: "";
-        z-index: 1;
+     &::before {
+       position: absolute;
+       content: "";
+       width: 30%;
+       height: 100%;
+       left: 0;
+       bottom: 0;
+       background: var(--blue);
+       opacity: 1;
+       transform-origin: 0 100%;
+       opacity: .9;
+     }
+
+     &::after{
         position: absolute;
+        content: "";
+        left: 30%;
         top: 0;
-        left: 0;
-        background-color: var(--blue);
-        width: 36%;
-        max-width: 705px;
-        height: 100%;
+        // triangulo
+       width: 0px;
+       height: 0px;
+       border-style: solid;
+       border-width: $height-banner 430px 0 0;
+       border-color: var(--blue) transparent transparent transparent;
+       transform: rotate(0deg);
+       opacity: .9;
+     }
+    
 
-        
-     
+    // &::before{
+    //     content: "";
+    //     z-index: 1;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     background-color: var(--blue);
+    //     width: 36%;
+    //     max-width: 705px;
+    //     height: 100%;
 
-        @include for_breakpoint(767){
-            width: 100%;
-            opacity: .4;
-            max-width: none;
-        }
-    }
+    //     @include for_breakpoint(767){
+    //         width: 100%;
+    //         opacity: .4;
+    //         max-width: none;
+    //     }
+    // }
 
     .content-text{
         margin-left: 28px;
@@ -64,9 +91,13 @@
     }
 
     h1{
-        // font-family: barlow-bold;
-        font-size: 72px;
-        color: white;
+        font-family: lexend-semibold;
+        font-size: 38px;
+        color: var(--orange);
+
+        strong{
+            font-size: 54px;
+        }
 
         @include for_breakpoint(1599){
             font-size: 68px;
@@ -147,7 +178,7 @@
 
     .widget {
         background-color: rgb(255, 255, 255);
-        box-shadow: 0px 0px 16px 4px rgba(51, 51, 51, 0.1);
+        //box-shadow: 0px 0px 16px 4px rgba(51, 51, 51, 0.1);
         position: absolute;
         bottom: -7%;
         left: 0;
@@ -162,8 +193,20 @@
         align-items: center;
         justify-content: center;
 
-        
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          right: 0;
 
+          // triangulo
+          width: 0px;
+          height: 0px;
+          border-style: solid;
+          border-width: 0 0 70px 40px;
+          border-color: transparent transparent var(--orange) transparent;
+          transform: rotate(0deg);
+        }
 
         p{
             color: #333333;
