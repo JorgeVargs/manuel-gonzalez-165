@@ -1,4 +1,5 @@
 import { Component, HostListener} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({

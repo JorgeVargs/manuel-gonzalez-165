@@ -125,6 +125,10 @@ background-color: var(--orange);
       }
     }
 
+    .invalid-feedback{
+      color: var(--blue-strong);
+      font-size: 18px;
+    }
 
     p {
       font-family: lexend-regular;
@@ -134,15 +138,36 @@ background-color: var(--orange);
       margin-top: 20px;
     }
 
-    .btn-gold {
+    $height-btn: 60px;
+
+    .btn-blue {
+      background-color: var(--blue-strong);
+      position: relative;
+      color: white;
+      border-radius: 0px;
       width: 330px;
-      height: 60px;
+      height: $height-btn;
       font-size: 18px;
-      font-family: barlow-semibold;
+      font-family: lexend-bold;
       text-transform: uppercase;
       margin-left: auto;
       display: block;
       margin-top: 50px;
+      border: 0px;
+
+      &::after{
+        content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 0px;
+          height: 0px;
+          border-style: solid;
+          border-width: $height-btn 49px 0 0;
+          border-color: var(--orange) transparent transparent transparent;
+          transform: rotate(0deg);
+        
+      }
     }
 
     @include for_breakpoint(991) {

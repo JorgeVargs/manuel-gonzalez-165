@@ -54,7 +54,7 @@ export class ContactoComponent implements OnInit {
           confirmButtonText: "Aceptar",
           showCloseButton: false,
           text: 'Acepte la politica de privacidad',
-          confirmButtonColor: "#C09E58"
+          confirmButtonColor: "#f05a28"
         }));
         return;
       }
@@ -101,7 +101,7 @@ export class ContactoComponent implements OnInit {
         confirmButtonText: "Aceptar",
         showCloseButton: false,
         text: 'Complete los campos requeridos',
-        confirmButtonColor: "#C09E58"
+        confirmButtonColor: "#f05a28"
       }));
     }
   }

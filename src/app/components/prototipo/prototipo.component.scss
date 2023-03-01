@@ -1,5 +1,25 @@
 @import '../../../assets/sass/mixins';
 
+.modal{
+    .modal-dialog{
+        .modal-content{
+            border-radius: 0px;
+            .modal-header{
+                border-bottom: 0px;
+                padding: 20px 20px 0px;
+                p{
+                    font-size: 18px;
+                    color: var(--orange);
+                    margin-bottom: 0px;
+                    strong{
+                        font-family: lexend-semibold;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .prototipos{
     padding: 8% 0px;
     background-color: var(--blue);
@@ -26,6 +46,7 @@
                     padding: 20px 0px;
 
                     img{
+                        cursor: pointer;
                         filter: invert(39%) sepia(84%) saturate(1876%) hue-rotate(347deg) brightness(99%) contrast(91%);
                         ;
                     }

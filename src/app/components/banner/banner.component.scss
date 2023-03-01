@@ -1,18 +1,7 @@
 @import "../../../assets/sass/mixins";
 
 $height-banner:1000px;
-
-@include for_breakpoint(1599) {
-  $height-banner: 900px;
-}
-
-@include for_breakpoint(1399) {
-  $height-banner: 800px;
-}
-
-@include for_breakpoint(480) {
-  $height-banner: 700px;
-}
+$width-transparencia: 28%;
 
 .header{
     position: relative;
@@ -24,13 +13,12 @@ $height-banner:1000px;
     height: $height-banner;
     background-position: center;
     background-repeat: no-repeat;
-
-    
+    background-size: cover;
 
      &::before {
        position: absolute;
        content: "";
-       width: 30%;
+       width: $width-transparencia;
        height: 100%;
        left: 0;
        bottom: 0;
@@ -43,41 +31,49 @@ $height-banner:1000px;
      &::after{
         position: absolute;
         content: "";
-        left: 30%;
+        left: $width-transparencia;
         top: 0;
         // triangulo
        width: 0px;
        height: 0px;
        border-style: solid;
-       border-width: $height-banner 430px 0 0;
+       border-width: $height-banner 570px 0 0;
        border-color: var(--blue) transparent transparent transparent;
        transform: rotate(0deg);
        opacity: .9;
      }
-    
 
-    // &::before{
-    //     content: "";
-    //     z-index: 1;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     background-color: var(--blue);
-    //     width: 36%;
-    //     max-width: 705px;
-    //     height: 100%;
+     @include for_breakpoint(1599) {
+       $height-banner: 900px;
+       $width-transparencia:32%;
 
-    //     @include for_breakpoint(767){
-    //         width: 100%;
-    //         opacity: .4;
-    //         max-width: none;
-    //     }
-    // }
+       height: $height-banner;
+
+       &::before{
+        width: $width-transparencia;
+       }
+
+       &::after{
+        border-width: $height-banner 450px 0 0;
+        left: $width-transparencia;
+       }
+      
+     }
+
+     @include for_breakpoint(1399) {
+       $height-banner: 800px;
+       $width-transparencia: 32%;
+     }
+
+     @include for_breakpoint(480) {
+       $height-banner: 700px;
+     }
+
 
     .content-text{
-        margin-left: 28px;
+        margin-left: 0;
         margin-top: 7%;
-        padding-left: 2%;
+        padding-left: 0;
 
         @include for_breakpoint(767){
             border: 0px;
@@ -88,92 +84,82 @@ $height-banner:1000px;
             margin-left: 0px;
             margin-left: 0px;
         }
-    }
 
-    h1{
-        font-family: lexend-semibold;
-        font-size: 38px;
-        color: var(--orange);
+         h1 {
+           font-family: lexend-semibold;
+           font-size: 38px;
+           color: var(--orange);
+           margin-bottom: 20px;
 
-        strong{
-            font-size: 54px;
-        }
+           strong {
+             font-size: 54px;
+           }
 
-        @include for_breakpoint(1599){
-            font-size: 68px;
-        }
+           @include for_breakpoint(1599) {
+             font-size: 35px;
+             strong{
+              font-size: 48px;
+             }
+           }
 
-        @include for_breakpoint(1399){
-            font-size: 65px;
-        }
+           @include for_breakpoint(1399) {
+             font-size: 32px;
+             strong {
+               font-size: 46px;
+             }
+           }
 
-        @include for_breakpoint(1199){
-            font-size: 60px;
-        }
+           @include for_breakpoint(1199) {
+             font-size: 60px;
+           }
 
-        @include for_breakpoint(991){
-            font-size: 56px;
-        }
+           @include for_breakpoint(991) {
+             font-size: 56px;
+           }
 
-        @include for_breakpoint(767){
-            text-align: center;
-            font-size: 50px;
-        }
+           @include for_breakpoint(767) {
+             text-align: center;
+             font-size: 50px;
+           }
 
-        @include for_breakpoint(480){
-            font-size: 40px;
-        }
-    }
+           @include for_breakpoint(480) {
+             font-size: 40px;
+           }
+         }
 
-    p{
-        font-size: 32px;
-        line-height: 1.2;
-        color: white;
+         p {
+           font-size: 24px;
+           line-height: 1.2;
+           color: white;
 
-        @include for_breakpoint(1399){
-            font-size: 28px;
-        }
+           &:nth-of-type(2) {
+             font-size: 40px;
+             color: var(--orange);
+             margin-top: 30px;
+           }
 
-        @include for_breakpoint(1199){
-            font-size: 26px;
-        }
+           strong {
+             font-size: 65px;
+             font-family: lexend-semibold;
+           }
 
-        @include for_breakpoint(991){
-            font-size: 24px;
-        }
+           @include for_breakpoint(1399) {
+             font-size: 28px;
+           }
 
-        @include for_breakpoint(767){
-            font-size: 22px;
-            text-align: center;
-        }
-    }
+           @include for_breakpoint(1199) {
+             font-size: 26px;
+           }
 
-    .btn-gold{
-        max-width: 335px;
-        margin-top: 40px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        font-size: 18px;
-        img{
-            max-width: 40px;
-            filter:  invert(100%) sepia(0%) saturate(2%) hue-rotate(54deg) brightness(110%) contrast(101%);;
-        }
+           @include for_breakpoint(991) {
+             font-size: 24px;
+           }
 
-        @include for_breakpoint(1399){
-            max-width: 300px;
-            font-size: 17px;
-
-            img{
-                max-width: 35px;
-            }
-        }
-
-        @include for_breakpoint(767){
-            margin-left: auto;
-            margin-right: auto;
-        }
+           @include for_breakpoint(767) {
+             font-size: 22px;
+             text-align: center;
+           }
+         }
     }
 
     .widget {
