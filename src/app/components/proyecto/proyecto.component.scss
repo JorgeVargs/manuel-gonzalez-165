@@ -1,3 +1,5 @@
+@import "../../../assets/sass/mixins";
+
 .proyecto{
     background-color: var(--orange);
     padding: 9% 9% 6%;
@@ -10,5 +12,62 @@
             font-size: 28px;
             margin-top: 55px;
         }
+    }
+
+    @include for_breakpoint(1399){
+        padding: 10% 9% 6%;
+
+        p{
+            font-size: 18px;
+            &:first-of-type{
+                font-size: 24px;
+            }
+        }
+    }
+
+    @include for_breakpoint(1199){
+        padding: 14% 7% 6%;
+
+        p{
+            &:first-of-type{
+                font-size: 22px;
+            }
+        }
+    }
+
+    @include for_breakpoint(991){
+        padding: 16% 4% 6%;
+
+       p{
+        &:first-of-type{
+            margin-top: 35px;
+        }
+       }
+    }
+
+    @include for_breakpoint(767){
+        padding: 18% 4% 8%;
+       p{
+        font-size: 16px;
+
+        &:first-of-type{
+            font-size: 20px;
+        }
+       }
+    }
+
+    @include for_breakpoint(575){
+        padding: 30% 4% 8%;
+
+        p{
+            font-size: 15px;
+            &:first-of-type{
+                font-size: 18px;
+            }
+        }
+    }
+
+    @include for_breakpoint(480){
+        padding: 34% 4% 6%;
     }
 }

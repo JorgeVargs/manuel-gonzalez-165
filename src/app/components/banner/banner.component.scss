@@ -108,8 +108,19 @@ $width-transparencia: 28%;
       }
     }
 
+    @include for_breakpoint(575){
+      $width-transparencia: 100%;
+      &::before{
+        width: $width-transparencia;
+       }
+      &::after{
+        display: none;
+      }
+    }
+
      @include for_breakpoint(480) {
-       $height-banner: 700px;
+       $height-banner:600px;
+       height: $height-banner;
      }
 
 
@@ -168,11 +179,18 @@ $width-transparencia: 28%;
 
            @include for_breakpoint(767) {
              text-align: center;
+             font-size: 22px;
+             strong{
+              font-size: 34px;
+             }
              
            }
 
            @include for_breakpoint(480) {
-             font-size: 40px;
+             font-size: 20px;
+             strong{
+              font-size: 30px;
+             }
            }
          }
 
@@ -229,6 +247,13 @@ $width-transparencia: 28%;
            @include for_breakpoint(767) {
              font-size: 22px;
              text-align: center;
+           }
+
+           @include for_breakpoint(575){
+            font-size: 20px;
+            strong{
+              font-size: 45px;
+            }
            }
          }
     }

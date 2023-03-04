@@ -21,7 +21,7 @@
 }
 
 .prototipos{
-    padding: 8% 0px;
+    padding: 140px 0px;
     background-color: var(--blue);
 
     h2{
@@ -81,6 +81,50 @@
             }
         }
     }
+
+    @include for_breakpoint(1199){
+       padding: 120px 0px;
+        img{
+            margin: auto;
+            display: block;
+        }
+        
+        ul{
+            margin-bottom: 60px;
+        }
+    }
+
+    @include for_breakpoint(991){
+        padding: 80px 0px;
+    }
+
+    @include for_breakpoint(575){
+        table{
+            thead{
+                th{
+                    &:not(:last-of-type){
+                        width: 30%;
+                    }   
+                    font-size: 14px;
+                    padding: 0px;
+                    padding-right: 20px;
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        &:not(:last-of-type){
+                            width: 30%;
+                        }
+
+                        img{
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .creditos{
@@ -111,5 +155,47 @@
         color: white;
         text-align: center;
         font-size: 28px;
+    }
+
+    @include for_breakpoint(1599){
+        p{
+            font-size: 24px;
+        }
+    }
+
+    @include for_breakpoint(1399){
+        padding: 20px 0px;
+        img{
+            max-width: 70px;
+        }
+        p{
+            font-size: 22px;
+        }
+    }
+
+    @include for_breakpoint(991){
+        p{
+            font-size: 22px;
+        }
+    }
+
+    @include for_breakpoint(767){
+        padding: 15px 20px;
+        img{
+            max-width: 60px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+
+    @include for_breakpoint(480){
+        padding: 15px 30px;
+        img{
+            max-width: 50px;
+        }
+        p{
+            font-size: 16px;
+        }
     }
 }

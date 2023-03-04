@@ -2,14 +2,18 @@
 
 .departamentos{
     background-color: #ffffff;
-    padding-top: 118px;
+    padding:150px 0px;
+
+    @include for_breakpoint(1399){
+        padding: 120px 0px;
+    }
 
     @include for_breakpoint(1199){
-        padding-top: 80px;
+        padding: 100px 0px;
     }
 
     @include for_breakpoint(991){
-        padding-top: 40px;
+       padding: 80px 0px;
     }
     
 
@@ -17,57 +21,6 @@
         color: var(--blue);
         margin-bottom: 70px;
     }
-
-    // h2{
-    //     color: var(--blue-strong);
-    //  
-    //     font-size: 72px;
-    //     text-align: center;
-
-    //     &::after{
-    //         content: "";
-    //         display: block;
-    //         background-color: var(--blue);
-    //         width: 120px;
-    //         height: 6px;
-    //         border-radius: 3px;
-    //         margin-top: 8px;
-    //         margin-bottom: 55px;
-    //         margin-left: auto;
-    //         margin-right: auto;
-    //     }
-
-    //     @include for_breakpoint(1699){
-    //         font-size: 68px;
-    //     }
-
-    //     @include for_breakpoint(1399){
-    //         font-size: 60px;
-    //     }
-        
-    //     @include for_breakpoint(1199){
-    //         font-size: 50px;
-    //         &::after{
-    //             width: 100px;
-    //             margin-bottom: 45px;
-    //         }
-    //     }
-
-    //     @include for_breakpoint(991){
-    //         text-align: center;
-    //         margin-top: 40px;
-            
-    //         &::after{
-    //             margin-left: auto;
-    //             margin-right: auto;
-    //         }
-    //     }
-
-    //     @include for_breakpoint(480){
-    //         font-size: 40px;
-    //     }
-        
-    // }
 
     h3{
         color: var(--text);
@@ -77,27 +30,20 @@
        
 
         @include for_breakpoint(1699){
-            font-size: 30px;
+            font-size: 26px;
         }
 
         @include for_breakpoint(1399){
-            font-size: 28px;
-        }
-
-        @include for_breakpoint(1199){
-            &.caract{
-                margin-left: 45px;
-            }
+            font-size: 22px;
         }
 
         @include for_breakpoint(991){
+            font-size: 20px;
             text-align: center;
         }
 
         @include for_breakpoint(767){
-           &.caract{
-            margin-left: 0px;
-           }
+
         }
 
         @include for_breakpoint(480){
@@ -107,6 +53,10 @@
 
     p{
         color: #7a7a7a;
+
+        @include for_breakpoint(991){
+            text-align: center;
+        }
     }
 
     ul{
@@ -120,7 +70,7 @@
         margin-top: 30px;
         li{
             margin: 0px 20px 35px;
-            width: 130px;
+           // width: 130px;
            .icon{
             width: 120px;
             height: 75px;
@@ -130,11 +80,6 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 15px;
-            // img{
-            //     width: 120px;
-            //     height: auto;
-            //     filter: invert(51%) sepia(46%) saturate(4362%) hue-rotate(342deg) brightness(94%) contrast(100%);
-            // }
            }
 
            p{
@@ -191,6 +136,14 @@
 
         }
 
+        @include for_breakpoint(1699){
+            &.caract{
+                li{
+                    width: 180px;
+                }
+            }
+        }
+
         @include for_breakpoint(1599){
             li{
                 width: 120px;
@@ -208,6 +161,12 @@
                 }
             }
 
+            &.caract{
+                li{
+                    width: 160px;
+                }
+            }
+
             &.lista{
                 li{
                     font-size: 17px;
@@ -218,30 +177,53 @@
 
         @include for_breakpoint(1199){
             margin-left: 0px;
+
+            &.caract{
+                li{
+                    padding: 15px 0px;
+                    border-left: 0px !important;
+                    &:not(:last-of-type){
+                        border-bottom: 1px solid #eeeeee;
+                    }
+                }
+            }
+           
         }
 
         @include for_breakpoint(991){
+            &.caract{
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+                max-width: none;
+                margin-bottom: 20px;
+                li{
+                    border-bottom: 0px !important;
+                    .icon{
+                        width: 100px;
+                    }
+                }
+            }
+            
+        }
+
+        @include for_breakpoint(767){
+            &.lista{
+                li{
+                    font-size: 16px;
+                    max-width: 240px;
+                }
+            }
+        }
+
+        @include for_breakpoint(575){
+           &.lista{
             margin-left: auto;
-            margin-right: auto;
-            justify-content: center;
-            &.lista{
-                padding-left: 60px;
+            margin-bottom: 20px;
+            li{
+                max-width: none;
             }
+           }
         }
-
-        @include for_breakpoint(480){
-            &.lista{
-                padding-left: 10px;
-            }
-        }
-    }
-
-    .slider-depto{
-        margin-top: 40px;
-
-        @include for_breakpoint(991){
-            margin-bottom: 55px;
-        }
-        
     }
 }

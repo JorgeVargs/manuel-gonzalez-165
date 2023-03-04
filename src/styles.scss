@@ -42,12 +42,53 @@ h2{
     &::after{
         content: "";
         background-image: url(../src/assets/images/esquina-white.png);
+        background-repeat: no-repeat;
         width: 70px;
         height: 120px;
         position: absolute;
         left: -25px;
         top:-8px;
     }
+
+    @include for_breakpoint(1599){
+        font-size: 65px;
+    }
+
+    @include for_breakpoint(1499){
+        font-size: 60px;
+        &::after{
+            width: 60px;
+            height: 90px;
+            background-size: contain;
+            left: -15px;
+        }
+    }
+
+    @include for_breakpoint(1199){
+        font-size: 56px;
+    }
+
+    @include for_breakpoint(991){
+        font-size: 52px;
+    }
+
+    @include for_breakpoint(767){
+        font-size: 46px;
+    }
+
+    @include for_breakpoint(575){
+        font-size: 42px;
+
+        &::after{
+            width: 50px;
+            height: 80px;
+        }
+    }
+
+    @include for_breakpoint(480){
+        font-size: 36px;
+    }
+    
 }
 
 .container-fluid{
