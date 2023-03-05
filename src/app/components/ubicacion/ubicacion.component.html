@@ -15,7 +15,7 @@
         </div>
 
         <div class="row">
-            <div class="col-3 offset-1">
+            <div class="col-md-6 col-xl-5 offset-0 col-xxl-3 offset-xl-1">
                 <h3>Avenidas Principales</h3>
                 <ul>
                     <li>Av. Insurgentes</li>
@@ -25,7 +25,7 @@
                     <li>Avenida Guerrero</li>
                 </ul>
             </div>
-            <div class="col-5 offset-1">
+            <div class="col-md-6 col-xl-5 offset-0 col-xxl-5 offset-xl-1">
                 <h3>Transporte público</h3>
                 <ul>
                     <li>Línea 3 del Metro que va de Indios Verdes a Universidad. <br>Estaciones Tlatelolco (220 m) y
@@ -44,7 +44,7 @@
 <section class="lugares">
     <div class="container-fluid custom">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12 order-2 col-lg-7 order-lg-1 col-xl-6 col-xxl-6">
                 <div class="tabs">
                     <ul class="nav nav-tabs" id="tabs-lugares" role="tablist">
                         <li class="nav-item" role="presentation">
@@ -154,8 +154,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <img src="./../../../assets/images/manuel-gonzalez-165-mapa-referencias.jpg" class="img-fluid" alt="">
+            <div class="col-12 order-1 col-md-8 offset-md-2 order-lg-2 offset-lg-0 col-lg-5 col-xl-6 col-xxl-6">
+                <img src="./../../../assets/images/manuel-gonzalez-165-mapa-referencias.jpg" class="img-fluid mapa" alt="">
             </div>
         </div>
     </div>
@@ -165,13 +165,16 @@
                 <swiper class="slide-referencias" [slidesPerView]="5" [spaceBetween]=30 [pagination]="{
                                     clickable: true
                                   }" [breakpoints]="{
-                                    '320':{
+                                    '0':{
                                         slidesPerView: 1
                                     },
-                                    '767':{
+                                    '480':{
+                                        slidesPerView:2
+                                    },
+                                    '800':{
                                         slidesPerView: 3
                                     },
-                                    '1199':{
+                                    '1200':{
                                         slidesPerView: 5
                                     }
                                 }">
