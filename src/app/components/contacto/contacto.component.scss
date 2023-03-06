@@ -1,16 +1,24 @@
 @import '../../../assets/sass/mixins';
 
 .contacto {
-  padding: 115px 0px;
+  padding: 150px 0px;
 //   background-image: url(../../../assets/images/superior-56-contacto-filtro.jpg);
-background-color: var(--orange);
+  background-color: var(--orange);
   background-position: center;
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include for_breakpoint(1399) {
+    padding: 120px 0px;
+  }
+
   @include for_breakpoint(991) {
-    padding: 45px 0px 90px;
+    padding: 100px 0px
+  }
+
+  @include for_breakpoint(767) {
+    padding: 80px 0px
   }
 
   h2{
@@ -45,9 +53,15 @@ background-color: var(--orange);
       }
     }
 
-    @include for_breakpoint(1399) {
-      a {
-        font-size: 28px;
+    @include for_breakpoint(1799) {
+      a{
+        font-size: 22px;
+      }
+    }
+
+    @include for_breakpoint(1399){
+      img{
+        width: 45px;
       }
     }
 
@@ -55,10 +69,26 @@ background-color: var(--orange);
       img {
         width: 40px;
       }
+
+      a{
+        font-size: 20px;
+      }
     }
 
     @include for_breakpoint(767) {
       margin-bottom: 40px;
+    }
+
+    @include for_breakpoint(480){
+      img{
+        width: 35px;
+      }
+      a{
+        font-size: 17px;
+        p{
+          font-size: 15px;
+        }
+      }
     }
   }
 
@@ -69,8 +99,12 @@ background-color: var(--orange);
     text-align: left;
     margin-top: 50px;
 
-    @include for_breakpoint(767) {
-      margin-top: 30px;
+    @include for_breakpoint(1399) {
+      font-size: 26px;
+    }
+
+    @include for_breakpoint(991){
+      font-size: 24px;
     }
   }
 
@@ -170,15 +204,38 @@ background-color: var(--orange);
       }
     }
 
-    @include for_breakpoint(991) {
+    @include for_breakpoint(1599){
       .form-check {
         label {
-          font-size: 18px;
+          font-size: 16px;
         }
       }
+    }
 
-      .btn-gold {
+    @include for_breakpoint(1399){
+      .btn-blue{
+        width: 300px;
+      }
+    }
+
+    @include for_breakpoint(991) {
+      .btn-blue {
         width: 240px;
+      }
+
+      label{
+        font-size: 18px
+      }
+
+      input[type="email"],
+      input[type="text"],
+      input[type="tel"],
+      textarea{
+        @include placeholder(white, 18px, lexend-light);
+      }
+
+      p{
+        font-size: 18px;
       }
     }
 
@@ -187,7 +244,7 @@ background-color: var(--orange);
         margin: 20px auto;
       }
 
-      .btn-gold {
+      .btn-blue {
         margin-right: auto;
       }
     }
