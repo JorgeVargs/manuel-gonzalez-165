@@ -20,6 +20,7 @@ import { SwiperModule } from 'swiper/angular';
 import { HttpClientModule } from '@angular/common/http';
 import { RECAPTCHA_SETTINGS,RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
+import { AvisoPrivacidadComponent } from './components/aviso-privacidad/aviso-privacidad.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { environment } from 'src/environments/environment';
     DepartamentosComponent,
     PrototipoComponent,
     UbicacionComponent,
-    ContactoComponent
+    ContactoComponent,
+    AvisoPrivacidadComponent
   ],
   imports: [
     BrowserModule,
