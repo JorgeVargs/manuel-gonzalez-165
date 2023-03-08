@@ -33,15 +33,16 @@ try {
                 $mail->SMTPSecure = 'tls';
                 $mail->Port = 587;
 
-                $mail->setFrom('sendlead@saki.group', 'Saki ');
+                $mail->setFrom('sendlead@saki.group', 'Manuel González 165 ');
 
                 $mail->isHTML(true);
                 $mail->CharSet = 'UTF-8';
-                $mail->Subject = 'Contacto - Manuel Gonzalez 165';
-                $mail->Body = '<strong>Nombre: </strong>'.$datos->nombre . ' <br> <strong>Teléfono:</strong>' . $datos->telefono . ' <br><strong>Correo:</strong> ' . $datos->email . ' <br><strong>Mensaje:</strong> ' . $datos->mensaje;
+                $mail->Subject = 'Contacto - Manuel González 165';
+                $mail->Body = '<strong>Nombre: </strong> '.$datos->nombre . ' <br> <strong>Teléfono: </strong> ' . $datos->telefono . ' <br><strong>Correo: </strong> ' . $datos->email . ' <br><strong>Mensaje: </strong> ' . $datos->mensaje;
 
-               // $mail->AddAddress('info@cpruvitlatelolco.com','CPRUVITLATELOLCO');
-                $mail->AddAddress('luisvardez@gmail.com', 'Luis Vargas');
+                $mail->AddAddress('contacto@cpruvitlatelolco.com','Contacto Manuel González');
+                $mail->addCC('ldealva@citytowers.mx','Idealva Citytowers');
+                $mail->addBCC('luisvardez@gmail.com', 'Luis Vargas');
                 $mail->addBCC('marcozepedamolina@gmail.com');
                 $mail->Send();
                 $mail->SmtpClose();

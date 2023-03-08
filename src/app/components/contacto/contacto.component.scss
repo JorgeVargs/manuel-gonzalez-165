@@ -247,6 +247,12 @@
         margin-right: auto;
       }
     }
+
+    @include for_breakpoint(480){
+      .btn-blue{
+        width: 100%;
+      }
+    }
   }
 }
 
