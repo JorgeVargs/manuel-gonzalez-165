@@ -1,0 +1,57 @@
+@import '../../../assets/sass/mixins';
+
+.extras{
+    margin-top: 14%;
+    margin-bottom:7%;
+    text-align: center;
+
+    @include for_breakpoint(1399) {
+      margin-top: 20%;
+    }
+
+    @include for_breakpoint(991) {
+        margin-top: 25%;
+      }
+  
+    @include for_breakpoint(480) {
+      margin-top:50%;
+    }
+   
+
+    h2{
+        color: var(--blue);
+        margin-bottom: 70px;
+    }
+
+    h3{
+        font-size: 28px;
+        color: #1a1a1a;
+        span{
+            font-family: lexend-semibold;
+           
+            display: block;
+        }
+    }
+
+    p{
+        font-size: 18px;
+        font-family: lexend-regular;
+        color: #7a7a7a;
+        margin-top: 40px;
+        strong{
+            color: #333333;
+            font-family: lexend-semibold;
+            text-transform: uppercase;
+        }
+
+        a{
+            color: #7a7a7a;
+            text-decoration: underline;
+            font-family: lexend-bold;
+        }
+
+        @include for_breakpoint(480){
+            font-size: 16px;
+        }
+    }
+}

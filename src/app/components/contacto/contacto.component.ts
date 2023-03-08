@@ -36,8 +36,8 @@ export class ContactoComponent implements OnInit {
       telefono: new FormControl('', [Validators.required, Validators.min(1)]),
       email: new FormControl('', [Validators.required, Validators.email]),
       mensaje: new FormControl('', [Validators.required, Validators.minLength(10)]),
-      politica: new FormControl(false, [Validators.required])
-      
+      politica: new FormControl(false, [Validators.required]),
+      recaptcha: new FormControl(false, [Validators.required])
     })
   }
 

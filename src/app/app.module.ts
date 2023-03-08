@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RECAPTCHA_SETTINGS,RecaptchaFormsModule, RecaptchaModule, RecaptchaSettings } from 'ng-recaptcha';
 import { environment } from 'src/environments/environment';
 import { AvisoPrivacidadComponent } from './components/aviso-privacidad/aviso-privacidad.component';
+import { GraciasComponent } from './components/gracias/gracias.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AvisoPrivacidadComponent } from './components/aviso-privacidad/aviso-pr
     PrototipoComponent,
     UbicacionComponent,
     ContactoComponent,
-    AvisoPrivacidadComponent
+    AvisoPrivacidadComponent,
+    GraciasComponent
   ],
   imports: [
     BrowserModule,

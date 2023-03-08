@@ -9,16 +9,16 @@
             <div class="col-12 col-md-5 col-xl-3">
                 <div class="contact-no">
                     <img src="assets/images/icons/icon-contacto-whatsapp.svg" class="img-fluid" alt="WhatsApp" />
-                    <a href=""
+                    <a href="https://wa.link/4vl78o"
                         target="_blank">
-                        <p>Whatsapp</p> 55 7872-7473
+                        <p>Whatsapp</p> 55 7872-7443
                     </a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-xl-5">
                 <div class="contact-no justify-content-md-end">
                     <img src="assets/images/icons/icon-contacto-mail.svg" class="img-fluid" alt="Teléfono" />
-                    <a href="tel:5552666638" target="_blank">
+                    <a href="mailto:contacto@cpruvitlatelolco.com" target="_blank">
                         <p>Correo</p> contacto@cpruvitlatelolco.com
                     </a>
                 </div>
@@ -39,7 +39,7 @@
                             formControlName="nombre" class="form-control" placeholder="* Nombre">
                     </div>
                     <div class="col-12 col-md-6 mt-5">
-                        <input type="tel" name="input_phone" [ngClass]="{'is-invalid': isValid('telefono')}"
+                        <input type="tel" name="telefono" [ngClass]="{'is-invalid': isValid('telefono')}"
                             formControlName="telefono" class="form-control" placeholder="* Teléfono">
                         <div class="invalid-feedback"
                             *ngIf="formDatos.get('telefono').status == 'INVALID' && formDatos.get('telefono').touched">
@@ -47,20 +47,20 @@
                     </div>
                     <div class="col-12 col-md-6 mt-5">
                         <input type="email" name="email" [ngClass]="{'is-invalid': isValid('email')}"
-                            formControlName="email" class="form-control" placeholder="* Correo">
+                            formControlName="email" class="form-control" placeholder="* Correo electrónico">
                         <div class="invalid-feedback"
                             *ngIf="formDatos.get('email').status == 'INVALID' && formDatos.get('email').touched">El
                             email es incorrecto</div>
                     </div>
                     <div class="col-12 mt-5">
-                        <label for="input_mensaje" class="form-label">* Mensaje</label>
+                        <label for="mensaje" class="form-label">* Mensaje</label>
                         <textarea name="mensaje" class="form-control" [ngClass]="{'is-invalid': isValid('mensaje')}"
-                            formControlName="mensaje" id="input_mensaje" rows="3"></textarea>
+                            formControlName="mensaje" id="mensaje" rows="3"></textarea>
                     </div>
 
                     <div class="col-12 col-md-6">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck" formControlName="politica">
+                            <input class="form-check-input" type="checkbox" id="politica" formControlName="politica">
                             <label class="form-check-label" for="gridCheck">
                                 He leído y acepto la <a routerLink="/aviso-de-privacidad">politica de privacidad</a>
                             </label>
@@ -78,7 +78,7 @@
                         </re-captcha>
                         <div *ngIf="recaptcha.invalid && (recaptcha.dirty || recaptcha.touched)"
                             class="invalid-feedback">
-                            <!-- <div *ngIf="recaptcha.errors?.required">Este campo es requerido</div> -->
+                            <div *ngIf="recaptcha.errors">Este campo es requerido</div>
                         </div>
 
                     </div>

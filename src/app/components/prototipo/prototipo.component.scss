@@ -155,6 +155,10 @@
         color: white;
         text-align: center;
         font-size: 28px;
+        font-family: lexend-light;
+        strong{
+            font-family: lexend-semibold;
+        }
     }
 
     @include for_breakpoint(1599){

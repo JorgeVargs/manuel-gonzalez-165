@@ -5,9 +5,9 @@
 export const environment = {
   production: false,
    recaptcha: {
-    siteKey: '6LcMAoEhAAAAAAYizCWUCsdMROd5tfRCQxXdiEin',
+    siteKey: '6LdAkOQkAAAAABBr2kXKgoCktuvhubzqEbjF846F',
   },
-  api_smtp :'http://superior56.loc/PHP/'
+  api_smtp :'http://manuegonzalez165.loc/PHP'
 };
 
 /*

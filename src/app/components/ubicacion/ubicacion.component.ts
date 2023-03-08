@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SwiperComponent } from 'swiper/angular';
 import SwiperCore, {Navigation, Pagination } from 'swiper';
 
+SwiperCore.use([Pagination, Navigation]);
+
 @Component({
   selector: 'app-ubicacion',
   templateUrl: './ubicacion.component.html',

@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import "assets/sass/mixins";
 
-@import '~swiper/css';
-@import '~swiper/css/pagination';
-@import '~swiper/css/navigation';
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
 
 @include fonts('lexend-light','/assets/fonts/Lexend-Light');
 @include fonts('lexend-regular','/assets/fonts/Lexend-Regular');
@@ -102,5 +102,33 @@ h2{
         @include for_breakpoint(480){
             padding: 0px 5%;
         }
+    }
+}
+
+.slide-referencias{
+    padding-bottom: 70px !important;
+    .swiper-pagination{
+        .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+            background-color:var(--orange);
+            opacity: .3;
+            position: relative;
+            margin: 0px 10px;
+            &.swiper-pagination-bullet-active{
+                opacity: 1;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    left: -5px;
+                    top: -5px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    border: 1px solid var(--orange);
+                }
+            }
+        }  
     }
 }

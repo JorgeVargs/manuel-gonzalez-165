@@ -1,229 +1,261 @@
 @import '../../../assets/sass/mixins';
 
-.departamentos{
-    background-color: #ffffff;
-    padding:150px 0px;
+.departamentos {
+  background-color: #ffffff;
+  padding: 150px 0px;
 
-    @include for_breakpoint(1399){
-        padding: 120px 0px;
+  @include for_breakpoint(1399) {
+    padding: 120px 0px;
+  }
+
+  @include for_breakpoint(1199) {
+    padding: 100px 0px;
+  }
+
+  @include for_breakpoint(991) {
+    padding: 80px 0px;
+  }
+
+
+  h2 {
+    color: var(--blue);
+    margin-bottom: 70px;
+  }
+
+  h3 {
+    color: var(--text);
+    font-size: 28px;
+    font-family: lexend-semibold;
+    text-align: left;
+
+
+    @include for_breakpoint(1699) {
+      font-size: 26px;
     }
 
-    @include for_breakpoint(1199){
-        padding: 100px 0px;
+    @include for_breakpoint(1399) {
+      font-size: 22px;
     }
 
-    @include for_breakpoint(991){
-       padding: 80px 0px;
-    }
-    
-
-    h2{
-        color: var(--blue);
-        margin-bottom: 70px;
+    @include for_breakpoint(991) {
+      font-size: 20px;
+      text-align: center;
     }
 
-    h3{
-        color: var(--text);
-        font-size: 28px;
-        font-family: lexend-semibold;
-        text-align:left;
-       
+    @include for_breakpoint(767) {}
 
-        @include for_breakpoint(1699){
-            font-size: 26px;
-        }
-
-        @include for_breakpoint(1399){
-            font-size: 22px;
-        }
-
-        @include for_breakpoint(991){
-            font-size: 20px;
-            text-align: center;
-        }
-
-        @include for_breakpoint(767){
-
-        }
-
-        @include for_breakpoint(480){
-            font-size: 25px;
-        }
+    @include for_breakpoint(480) {
+      font-size: 25px;
     }
+  }
 
-    p{
-        color: #7a7a7a;
+  p {
+    color: #7a7a7a;
 
-        @include for_breakpoint(991){
-            text-align: center;
-        }
+    @include for_breakpoint(991) {
+      text-align: center;
     }
+  }
 
-    ul{
-        list-style: none;
-        padding-left: 0px;
+  ul {
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 400px;
+    // margin-left: 10%;
+    margin-top: 30px;
+
+    li {
+      margin: 0px 20px 35px;
+
+      // width: 130px;
+      .icon {
+        width: 120px;
+        height: 75px;
+        background-color: var(--blue-light);
+        border-radius: 50%;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        max-width: 400px;
-        // margin-left: 10%;
-        margin-top: 30px;
-        li{
-            margin: 0px 20px 35px;
-           // width: 130px;
-           .icon{
-            width: 120px;
-            height: 75px;
-            background-color: var(--blue-light);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 15px;
-           }
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+      }
 
-           p{
-                color: #333333;
-                font-size: 16px;
-                text-align: center;
-                font-family: lexend-semibold;
-           }
-        }
-
-        &.caract{
-            li{
-                width: 200px;
-                margin: 0px;
-                padding: 20px 0px;
-
-                &:nth-of-type(1),
-                &:nth-of-type(2){
-                    border-bottom: 1px solid #eeeeee;
-                }
-
-                &:nth-of-type(2n){
-                    border-left: 1px solid #eeeeee;
-                }
-            }
-        }
-        
-        &.lista{
-            color: #626262;
-            list-style-type: none;  
-            flex-direction: column; 
-            margin-left: 0px;
-            margin-top: 10px;
-            li{
-                font-size: 18px;
-                width: auto;
-                max-width: 350px;
-                padding: 15px 0px 18px 33px; 
-                margin: 0px;   
-                position: relative;
-
-                &:not(:last-of-type){
-                    border-bottom: 1px solid #e0e8e8; 
-                }
-                &::before{
-                    content: "\2022";
-                    color: var(--orange);
-                    font-size: 30px;
-                    position: absolute;
-                    left: 0;
-                    top: 5%;
-                }
-            }
-
-        }
-
-        @include for_breakpoint(1699){
-            &.caract{
-                li{
-                    width: 180px;
-                }
-            }
-        }
-
-        @include for_breakpoint(1599){
-            li{
-                width: 120px;
-                margin: 0px 15px 35px;
-            }
-        }
-
-        @include for_breakpoint(1399){
-            li{
-                font-size: 17px;
-                width: 120px;
-                margin: 0px 15px 35px;
-                p{
-                    font-size: 17px;
-                }
-            }
-
-            &.caract{
-                li{
-                    width: 160px;
-                }
-            }
-
-            &.lista{
-                li{
-                    font-size: 17px;
-                    max-width: 280px;
-                }
-            }
-        }
-
-        @include for_breakpoint(1199){
-            margin-left: 0px;
-
-            &.caract{
-                li{
-                    padding: 15px 0px;
-                    border-left: 0px !important;
-                    &:not(:last-of-type){
-                        border-bottom: 1px solid #eeeeee;
-                    }
-                }
-            }
-           
-        }
-
-        @include for_breakpoint(991){
-            &.caract{
-                margin-left: auto;
-                margin-right: auto;
-                justify-content: center;
-                max-width: none;
-                margin-bottom: 20px;
-                li{
-                    border-bottom: 0px !important;
-                    .icon{
-                        width: 100px;
-                    }
-                }
-            }
-            
-        }
-
-        @include for_breakpoint(767){
-            &.lista{
-                li{
-                    font-size: 16px;
-                    max-width: 240px;
-                }
-            }
-        }
-
-        @include for_breakpoint(575){
-           &.lista{
-            margin-left: auto;
-            margin-bottom: 20px;
-            li{
-                max-width: none;
-            }
-           }
-        }
+      p {
+        color: #333333;
+        font-size: 16px;
+        text-align: center;
+        font-family: lexend-semibold;
+      }
     }
+
+    &.caract {
+      li {
+        width: 200px;
+        margin: 0px;
+        padding: 20px 0px;
+
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          border-bottom: 1px solid #eeeeee;
+        }
+
+        &:nth-of-type(2n) {
+          border-left: 1px solid #eeeeee;
+        }
+      }
+    }
+
+    &.lista {
+      color: #626262;
+      list-style-type: none;
+      flex-direction: column;
+      margin-left: 0px;
+      margin-top: 10px;
+
+      li {
+        font-size: 18px;
+        width: auto;
+        max-width: 350px;
+        padding: 15px 0px 18px 33px;
+        margin: 0px;
+        position: relative;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #e0e8e8;
+        }
+
+        &::before {
+          content: "\2022";
+          color: var(--orange);
+          font-size: 30px;
+          position: absolute;
+          left: 0;
+          top: 5%;
+        }
+      }
+
+    }
+
+    @include for_breakpoint(1699) {
+      &.caract {
+        li {
+          width: 180px;
+        }
+      }
+    }
+
+    @include for_breakpoint(1599) {
+      li {
+        width: 120px;
+        margin: 0px 15px 35px;
+      }
+    }
+
+    @include for_breakpoint(1399) {
+      li {
+        font-size: 17px;
+        width: 120px;
+        margin: 0px 15px 35px;
+
+        p {
+          font-size: 17px;
+        }
+      }
+
+      &.caract {
+        li {
+          width: 160px;
+        }
+      }
+
+      &.lista {
+        li {
+          font-size: 17px;
+          max-width: 280px;
+        }
+      }
+    }
+
+    @include for_breakpoint(1199) {
+      margin-left: 0px;
+
+      &.caract {
+        li {
+          padding: 15px 0px;
+          border-left: 0px !important;
+
+          &:not(:last-of-type) {
+            border-bottom: 1px solid #eeeeee;
+          }
+        }
+      }
+
+    }
+
+    @include for_breakpoint(991) {
+      &.caract {
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        max-width: none;
+        margin-bottom: 20px;
+
+        li {
+          border-bottom: 0px !important;
+
+          .icon {
+            width: 100px;
+          }
+        }
+      }
+
+    }
+
+    @include for_breakpoint(767) {
+      &.lista {
+        li {
+          font-size: 16px;
+          max-width: 240px;
+        }
+      }
+    }
+
+    @include for_breakpoint(575) {
+      &.caract {
+        li{
+            width: 170px;
+            &:nth-of-type(1),
+        &:nth-of-type(2) {
+          border-bottom: 1px solid #eeeeee !important;
+        }
+
+        &:nth-of-type(2n) {
+          border-left: 1px solid #eeeeee !important;
+        }
+        }
+      }
+
+      &.lista {
+        margin-left: auto;
+        margin-bottom: 20px;
+
+        li {
+          max-width: none;
+        }
+      }
+    }
+
+    @include for_breakpoint(400){
+        &.caract {
+            li{
+                width: 150px;
+                p{
+                    font-size: 16px;
+                }
+            }
+          }
+    }
+  }
 }

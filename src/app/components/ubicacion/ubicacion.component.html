@@ -16,7 +16,7 @@
 
         <div class="row">
             <div class="col-md-6 col-xl-5 offset-0 col-xxl-3 offset-xl-1">
-                <h3>Avenidas Principales</h3>
+                <h3>Avenidas principales</h3>
                 <ul>
                     <li>Av. Insurgentes</li>
                     <li>Eje Central Lázaro Cárdenas</li>
@@ -86,8 +86,8 @@
                             aria-labelledby="hospitales-tab" tabindex="0">
                             <img src="../../../assets/images/icons/icon-lugares-hospital.svg" class="img-fluid" />
                             <ul>
-                                <li>Hospital General IMSS Zona 27.</li>
-                                <li>Hospital Pediátrico Peralvillo.</li>
+                                <li>Hospital General IMSS Zona 27</li>
+                                <li>Hospital Pediátrico Peralvillo</li>
                                 <li>IMSS La Raza</li>
                                 <li>Issste Centro Hospitalario</li>
                             </ul>
@@ -98,7 +98,7 @@
                             <ul>
                                 <li>Walmart Tlatelolco</li>
                                 <li>Mercado San Joaquín</li>
-                                <li>Bodega Aerrera Express</li>
+                                <li>Bodega Aurrera Express</li>
                                 <li>Soriana Hiper Tlatelolco</li>
                             </ul>
                         </div>
@@ -136,7 +136,7 @@
                                 <li>Sushi Itto Puerta Tlatelolco</li>
                                 <li>Toks</li>
                                 <li>Wings Factory Tlatelolco</li>
-                                <li>Restaurante La Terraza De Los Amigos</li>
+                                <li>Restaurante La Terraza de Los Amigos</li>
                             </ul>
                         </div>
                         <div class="tab-pane fade" id="entretenimiento-tab-pane" role="tabpanel"
@@ -144,7 +144,7 @@
                             <img src="../../../assets/images/icons/icon-lugares-parque.svg" class="img-fluid" />
                             <ul>
                                 <li>Cinépolis</li>
-                                <li>Gran Salón de la Ciudad De México</li>
+                                <li>Gran Salón de la Ciudad de México</li>
                                 <li>Centro de Convenciones Tlatelolco</li>
                                 <li>Plaza de las Tres Culturas</li>
                                 <li>Jardín la Pera</li>
@@ -162,22 +162,26 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <swiper class="slide-referencias" [slidesPerView]="5" [spaceBetween]=30 [pagination]="{
-                                    clickable: true
-                                  }" [breakpoints]="{
-                                    '0':{
-                                        slidesPerView: 1
-                                    },
-                                    '480':{
-                                        slidesPerView:2
-                                    },
-                                    '800':{
-                                        slidesPerView: 3
-                                    },
-                                    '1200':{
-                                        slidesPerView: 5
-                                    }
-                                }">
+                <swiper class="slide-referencias" 
+                [slidesPerView]="5" 
+                [spaceBetween]=30 
+                [pagination]="{
+                    clickable: true
+                }" 
+                [breakpoints]="{
+                            '0':{
+                                slidesPerView: 1
+                            },
+                            '480':{
+                                slidesPerView:2
+                            },
+                            '800':{
+                                slidesPerView: 3
+                            },
+                            '1200':{
+                                slidesPerView: 5
+                            }
+                        }">
 
                     <ng-template swiperSlide>
                         <div class="image">

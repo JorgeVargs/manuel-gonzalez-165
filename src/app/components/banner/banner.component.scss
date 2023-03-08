@@ -108,7 +108,7 @@ $width-transparencia: 28%;
       }
     }
 
-    @include for_breakpoint(575){
+    @include for_breakpoint(767){
       $width-transparencia: 100%;
       &::before{
         width: $width-transparencia;

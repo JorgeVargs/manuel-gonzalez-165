@@ -1,7 +1,7 @@
 export const environment = {
   production: true,
   recaptcha: {
-    siteKey: '6LcMAoEhAAAAAAYizCWUCsdMROd5tfRCQxXdiEin',
+    siteKey: '6LdAkOQkAAAAABBr2kXKgoCktuvhubzqEbjF846F',
   },
-  api_smtp :'https://cpruvitlatelolco.com/api/'
+  api_smtp :'https://dev.cpruvitlatelolco.com/PHP/'
 };
