@@ -195,6 +195,9 @@
 
     @include for_breakpoint(480){
         padding: 15px 30px;
+        &::before{
+            height: 60%;
+        }
         img{
             max-width: 50px;
         }

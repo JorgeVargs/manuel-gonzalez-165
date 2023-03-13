@@ -32,10 +32,10 @@ export class ContactoComponent implements OnInit {
 
   initForm() {
     this.formDatos = new FormGroup({
-      nombre: new FormControl('', [Validators.required, Validators.minLength(10)]),
+      nombre: new FormControl('', [Validators.required]),
       telefono: new FormControl('', [Validators.required, Validators.min(1)]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      mensaje: new FormControl('', [Validators.required, Validators.minLength(10)]),
+      mensaje: new FormControl('', [Validators.required, Validators.minLength(5)]),
       politica: new FormControl(false, [Validators.required]),
       recaptcha: new FormControl(false, [Validators.required])
     })
